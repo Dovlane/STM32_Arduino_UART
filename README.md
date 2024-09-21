@@ -9,3 +9,37 @@ The assumptions in this document are that the user possesses basic knowledge of 
 ## Task Idea
 In short, the idea of this task is to use the STM32 (blue) user button to toggle the light on and off on an LED connected to the Arduino UNO via a breadboard.
 
+<table border="0">
+  <tr>
+    <td><b style="font-size:30px">Configuration 1</b></td>
+    <td><b style="font-size:30px">Configuration 2</b></td>
+  </tr>
+  <tr>
+    <td>
+      STM TX → Arduino RX and UART to USB TX
+      <ul>
+        <li>STM RX ← Arduino TX and UART to USB RX</li>
+        <li>STM and UART to USB transmit, and Arduino receives</li>
+        <li>Arduino transmits, and STM and UART to USB receive</li>
+      </ul>
+      Essentially, Arduino communicates with both, but STM and Arduino do not communicate with each other.
+    </td>
+    <td>
+      STM TX → Arduino TX and UART to USB RX
+      <ul>
+        <li>STM RX ← Arduino RX and UART to USB TX</li>
+        <li>STM and Arduino transmit, and UART to USB receives</li>
+        <li>UART to USB transmits, STM and Arduino receive</li>
+      </ul>
+      In this configuration, Arduino communicates with both, but STM and UART to USB do not communicate with each other.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src = "images/configuration-1.png" alt = "configuration 1">
+    </td>
+    <td>
+      <img src = "images/configuration-2.png" alt = "configuration 2">
+    </td>
+  </tr>
+</table>
