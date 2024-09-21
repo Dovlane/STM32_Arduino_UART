@@ -101,11 +101,13 @@ Next, in the System Core header under the GPIO section, we configure these pins 
 It is important to note that you also need to enable the external interrupt, which will be necessary for our USART to function in Interrupt mode. This is enabled in the System Core header under the NVIC section.
 
 <p align = "center">
-  <img src = "images/configuration_boards/configuration_STM32/SystemCoreNVIC_Interrupt.jpg" alt = "SystemCoreNVIC_Interrupt" width = "400"> 
+  <img src = "images/configuration_boards/configuration_STM32/SystemCoreNVIC_Interrupt.jpg" alt = "SystemCoreNVIC_Interrupt" width = "300"> 
 </p>
 
 
 ### USART Setup
 To communicate with the Arduino, it is necessary to configure USART1, which is located in the Connectivity header, with the following settings:
 
-
+<p align = "center">
+  <img src = "images/configuration_boards/usart_setup.jpg" alt = "usart_setup" width = "300"> 
+</p>
