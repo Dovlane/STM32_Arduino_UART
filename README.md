@@ -66,3 +66,21 @@ An important thing to note is that the Arduino UNO cannot simultaneously communi
   <br/>
   It is important to mention that the STM32F103RB has 3 USART channels for communication. USART 1 and USART 3 are for communication with other devices, while USART 2 is exclusively for communication with the computer. This is precisely one of the reasons why, when we want to issue commands from the computer, we will always do so by configuring USART 2.
 </i>
+
+## Board Configuration
+
+### Initial Setup
+
+#### Generating Separate Files
+First, for easier future work, we need to ensure that during the project build process, separate files are generated for the different functionalities of our STM board.
+
+#### Board Debugging
+To enable debugging (and program execution), in the System Core header within the SYS section, you should select Serial Wire for the debug mode and SysTick for the time unit.
+
+### STM32 Board Configuration
+
+We configure pin PC13 to respond to the user push button press. Then, we configure pin PA5 to control the LD2 LED through it.
+
+Next, in the System Core header under the GPIO section, we configure these pins as shown in the images:
+
+It is important to note that you also need to enable the external interrupt, which will be necessary for our USART to function in Interrupt mode. This is enabled in the System Core header under the NVIC section.
