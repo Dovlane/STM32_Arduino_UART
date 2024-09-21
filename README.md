@@ -59,3 +59,10 @@ An important thing to note is that the Arduino UNO cannot simultaneously communi
     </td>
   </tr>
 </table>
+
+
+<i>
+  NOTE:
+  <br/>
+  It is important to mention that the STM32F103RB has 3 USART channels for communication. USART 1 and USART 3 are for communication with other devices, while USART 2 is exclusively for communication with the computer. This is precisely one of the reasons why, when we want to issue commands from the computer, we will always do so by configuring USART 2.
+</i>
