@@ -111,3 +111,13 @@ To communicate with the Arduino, it is necessary to configure USART1, which is l
 <p align = "center">
   <img src = "images/configuration_boards/usart_setup.jpg" alt = "usart_setup" width = "300"> 
 </p>
+
+## Settings After Configuration
+### Headers and Necessary Variables
+Since we are working with USART in Interrupt mode, it is sufficient for us to program within Core/Src/gpio.c (if we were working in Polling mode, we would need a while loop in main.c).
+
+To start, we will include the file usart.h, which we need for USART, and two arrays: txdata, which we will need for communication with the Arduino, and set_reset, which we will use to turn the LD2 LED on and off.
+
+<p align = "center">
+  <img src = "images/setup_after_config.jpg" alt = "setup_after_config" width = "300"> 
+</p>
