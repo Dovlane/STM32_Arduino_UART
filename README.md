@@ -97,9 +97,13 @@ Next, in the System Core header under the GPIO section, we configure these pins 
   <img src = "images/configuration_boards/configuration_STM32/SystemCoreGPIO_PA5.jpg" alt = "SystemCoreGPIO_PA5" width = "300"> 
 </p>
 
+
 It is important to note that you also need to enable the external interrupt, which will be necessary for our USART to function in Interrupt mode. This is enabled in the System Core header under the NVIC section.
 
 <p align = "center">
   <img src = "images/configuration_boards/configuration_STM32/SystemCoreNVIC_Interrupt.jpg" alt = "SystemCoreNVIC_Interrupt" width = "400"> 
 </p>
+
+
+
 
