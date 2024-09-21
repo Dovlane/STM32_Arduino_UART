@@ -9,6 +9,18 @@ The assumptions in this document are that the user possesses basic knowledge of 
 ## Task Idea
 In short, the idea of this task is to use the STM32 (blue) user button to toggle the light on and off on an LED connected to the Arduino UNO via a breadboard.
 
+<p align = "center">
+  <img src = "images/scheme.jpg" alt = "scheme" height = "200"> 
+  <img src = "images/real_scheme.jpg" alt = "real_scheme" height = "200"> 
+</p>
+
+## UART
+An important thing to note is that the Arduino UNO cannot simultaneously communicate with both the STM32 Nucleo and the computer. It has only one communication channel and is capable of communicating with only one device at a time during its operation. The diagram below should help illustrate this better:
+
+<p align = "center">
+  <img src = "images/configuration.png" alt = "configuration" width = "400"> 
+</p>
+
 <table border="0">
   <tr>
     <td><b style="font-size:30px">Configuration 1</b></td>
@@ -36,10 +48,10 @@ In short, the idea of this task is to use the STM32 (blue) user button to toggle
   </tr>
   <tr>
     <td>
-      <img src = "images/configuration-1.png" alt = "configuration 1">
+      <img src = "images/configuration-1.png" alt = "configuration 1" width = "200">
     </td>
     <td>
-      <img src = "images/configuration-2.png" alt = "configuration 2">
+      <img src = "images/configuration-2.png" alt = "configuration 2" width = "200">
     </td>
   </tr>
 </table>
