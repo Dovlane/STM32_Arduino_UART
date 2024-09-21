@@ -74,12 +74,19 @@ An important thing to note is that the Arduino UNO cannot simultaneously communi
 #### Generating Separate Files
 First, for easier future work, we need to ensure that during the project build process, separate files are generated for the different functionalities of our STM board.
 
+
+
 #### Board Debugging
 To enable debugging (and program execution), in the System Core header within the SYS section, you should select Serial Wire for the debug mode and SysTick for the time unit.
 
 ### STM32 Board Configuration
 
 We configure pin PC13 to respond to the user push button press. Then, we configure pin PA5 to control the LD2 LED through it.
+
+<p align = "center">
+  <img src = "images/configuration_STM32/PC13---GPIO_EXTI13.jpg" alt = "PC13---GPIO_EXTI13" height = "200"> 
+  <img src = "images/configuration_STM32/PA5---GPIO_Output.jpg" alt = "PA5---GPIO_Output" height = "200"> 
+</p>
 
 Next, in the System Core header under the GPIO section, we configure these pins as shown in the images:
 
