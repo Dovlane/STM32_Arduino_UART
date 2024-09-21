@@ -142,5 +142,5 @@ If we click again with CTRL held down on the function HAL_GPIO_EXTI_IRQHandler, 
 </p>
 Next, we copy the weak definition of the function HAL_GPIO_EXTI_Callback into our gpio.c file. There, we will write the following code as shown in the image. This code will alternately send messages to turn the LD2 LED on and off, sending "1" and "0" to the Arduino, where "1" will signal the LED to turn on and "0" to turn off.
 <p align = "center">
-  <img src =  "images/setup_after_config/finding_callback_fun_interrupt-4.jpg" alt = "finding_callback_fun_interrupt-4" width = "300"> 
+  <img src =  "images/setup_after_config/finding_callback_fun_interrupt-4.jpg" alt = "finding_callback_fun_interrupt-4" width = "400"> 
 </p>
