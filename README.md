@@ -114,10 +114,33 @@ To communicate with the Arduino, it is necessary to configure USART1, which is l
 
 ## Settings After Configuration
 ### Headers and Necessary Variables
-Since we are working with USART in Interrupt mode, it is sufficient for us to program within Core/Src/gpio.c (if we were working in Polling mode, we would need a while loop in main.c).
+Since we are working with USART in <i>Interrupt mode</i>, it is sufficient for us to program within <i>Core/Src/gpio.c</i> (if we were working in <i>Polling mode</i>, we would need a <i>while</i> loop in <i>main.c</i>).
 
-To start, we will include the file usart.h, which we need for USART, and two arrays: txdata, which we will need for communication with the Arduino, and set_reset, which we will use to turn the LD2 LED on and off.
-
+To start, we will include the file <i>usart.h</i>, which we need for USART, and two arrays:
+<ul>
+  <li><i>txdata</i> - which we will need for communication with the Arduino and</li>
+  <li><i>set_reset</i> - which we will use to turn the LD2 LED on and off.</li>
+</ul>
+<br/>
 <p align = "center">
   <img src = "images/setup_after_config/headers_and_unnecessary_vars.jpg" alt = "headers_and_unnecessary_vars" width = "300"> 
+</p>
+
+### Searching for the Interrupt Callback Function
+
+To find the appropriate callback function for the interrupt, we first need to check which handlers exist in the file located at Core/Src/system_32f1xx_it.c.
+<p align = "center">
+  <img src =  "images/setup_after_config/finding_callback_fun_interrupt-1.jpg" alt = "finding_callback_fun_interrupt-1" width = "300"> 
+</p>
+Then, when we click on EXTI15_10_IRQHandler while holding CTRL + Left Mouse Button, we reach the following window.
+<p align = "center">
+  <img src =  "images/setup_after_config/finding_callback_fun_interrupt-2.jpg" alt = "finding_callback_fun_interrupt-2" width = "300"> 
+</p>
+If we click again with CTRL held down on the function HAL_GPIO_EXTI_IRQHandler, we will reach the next window.
+<p align = "center">
+  <img src =  "images/setup_after_config/finding_callback_fun_interrupt-3.jpg" alt = "finding_callback_fun_interrupt-3" width = "300"> 
+</p>
+Next, we copy the weak definition of the function HAL_GPIO_EXTI_Callback into our gpio.c file. There, we will write the following code as shown in the image. This code will alternately send messages to turn the LD2 LED on and off, sending "1" and "0" to the Arduino, where "1" will signal the LED to turn on and "0" to turn off.
+<p align = "center">
+  <img src =  "images/setup_after_config/finding_callback_fun_interrupt-4.jpg" alt = "finding_callback_fun_interrupt-4" width = "300"> 
 </p>
