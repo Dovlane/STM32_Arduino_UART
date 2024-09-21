@@ -119,5 +119,5 @@ Since we are working with USART in Interrupt mode, it is sufficient for us to pr
 To start, we will include the file usart.h, which we need for USART, and two arrays: txdata, which we will need for communication with the Arduino, and set_reset, which we will use to turn the LD2 LED on and off.
 
 <p align = "center">
-  <img src = "images/setup_after_config.jpg" alt = "setup_after_config" width = "300"> 
+  <img src = "images/setup_after_config/headers_and_unnecessary_vars.jpg" alt = "headers_and_unnecessary_vars" width = "300"> 
 </p>
