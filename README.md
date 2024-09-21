@@ -47,11 +47,15 @@ An important thing to note is that the Arduino UNO cannot simultaneously communi
     </td>
   </tr>
   <tr>
-    <td>
-      <img src = "images/configuration-1.png" alt = "configuration 1" width = "200">
+    <td style='text-align:center; vertical-align:middle'>
+      <p align = "center">
+        <img src = "images/configuration-1.png" alt = "configuration 1" width = "200">
+      </p>
     </td>
-    <td>
-      <img src = "images/configuration-2.png" alt = "configuration 2" width = "200">
+    <td style='text-align:center; vertical-align:middle'>
+      <p align = "center">
+        <img src = "images/configuration-2.png" alt = "configuration 2" width = "200">
+      </p>
     </td>
   </tr>
 </table>
