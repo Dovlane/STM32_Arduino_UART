@@ -105,5 +105,7 @@ It is important to note that you also need to enable the external interrupt, whi
 </p>
 
 
+### USART Setup
+To communicate with the Arduino, it is necessary to configure USART1, which is located in the Connectivity header, with the following settings:
 
 
