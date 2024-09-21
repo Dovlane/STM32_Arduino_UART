@@ -151,3 +151,19 @@ Next, we copy the weak definition of the function HAL_GPIO_EXTI_Callback into ou
 <p align = "center">
   <img src =  "images/setup_after_config/finding_callback_fun_interrupt-4.jpg" alt = "finding_callback_fun_interrupt-4" width = "400"> 
 </p>
+
+
+## Arduino Code
+
+The Arduino code is relatively simple. It reads the content of the message sent via USART, and if the message is "1," it sets a high voltage on the LED, while if it is "0," it sets a low voltage on the LED.
+
+<p align = "center">
+  <img src =  "images/arduino_code.jpg" alt = "arduino_code" width = "300"> 
+</p>
+
+<i>NOTE: It is important to set the same baud rate for the USART on both the STM and the Arduino to be 9600.</i>
+
+
+## Conclusion
+
+The task itself, when you are familiar with the operation of the STM32 Nucleo board, is not difficult. However, if you are not familiar with the different roles of the various USART communication channels (specifically how USART 2 differs from the other two), it will take you a long time. A warm recommendation for everyone starting programming with STM32 Nucleo boards is to get acquainted with their basic communication characteristics. The same applies to Arduino.
